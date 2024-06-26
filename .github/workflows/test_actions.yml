@@ -16,5 +16,7 @@ jobs:
           echo "GITHUB_REF ${GITHUB_REF}"
           echo "GITHUB_BASE_REF ${GITHUB_BASE_REF}"
           echo "GITHUB_HEAD_REF ${GITHUB_HEAD_REF}"
-          cat ./main_text.txt
-          cat ./branch_text.txt
+          echo "main_text.txt"
+          if [ -f ./main_text.txt ] ; then cat ./main_text.txt ; fi
+          echo "branch_text.txt"
+          if [ -f ./branch_text.txt ] ; then cat ./branch_text.txt ; fi
